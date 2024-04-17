@@ -37,6 +37,7 @@ var app = builder.Build();
         .MapGroup("Api/V{apiVersion:apiVersion}")
         .WithApiVersionSet(apiVersionSet);
 
+    versionGroup.MapBuyerEndpoints();
     versionGroup.MapTransactionEndpoints();
     app.Run();
 }
